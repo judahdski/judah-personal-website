@@ -1,6 +1,6 @@
 function Contacts() {
     return (
-        <section id="contacts" className="contacts justify-content-center align-items-stretch" style={{ display: 'none' }}>
+        <section id="contacts" className="contacts justify-content-center align-items-stretch">
             <div
                 className="p-2 
                         d-flex flex-column justify-content-center align-items-start gap-3"

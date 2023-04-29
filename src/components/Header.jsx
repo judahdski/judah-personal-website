@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import regularLogo from '../assets/img/regular-logo.png';
 
 function Header() {
@@ -20,12 +21,9 @@ function Header() {
                 <span className="p-2" style={{ display: 'inline-block' }}>
                     <i className="fa-solid fa-xmark" id="closeBtn"></i>
                 </span>
-                <a href="#projects" onClick={() => event.preventDefault()} className="nav-btn text-center p-3 pb-4 text-decoration-none" data-section="projects">
-                    PROJECTS
-                </a>
-                <a href="#contacts" onClick={() => event.preventDefault()} className="nav-btn text-center p-3 pb-4 text-decoration-none" data-section="contacts">
-                    CONTACT
-                </a>
+                
+                <NavLink to='/projects' className={'nav-btn text-center p-3 pb-4 text-decoration-none'}>PROJECTS</NavLink>
+                <NavLink to='/contacts' className={'nav-btn text-center p-3 pb-4 text-decoration-none'}>CONTACT</NavLink>
             </nav>
             <i className="fa-solid fa-align-right mobile-nav" id="hamburgerBtn"></i>
         </header>

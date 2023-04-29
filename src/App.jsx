@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom';
 import './assets/style/index';
 import { Header, Home, Projects, Contacts, Footer, NavText } from './components/index';
 
@@ -8,9 +9,11 @@ function App() {
                 <Header />
                 <div className="split d-lg-flex">
                     <main className="container">
-                        <Home />
-                        <Projects />
-                        <Contacts />
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/projects" element={<Projects />} />
+                            <Route path="/contacts" element={<Contacts />} />
+                        </Routes>
                     </main>
                     <Footer />
                     <NavText />
