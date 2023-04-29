@@ -1,0 +1,10 @@
+footer {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    footer {
+        width: 120px;
+        height: 100%;
+    }
+}

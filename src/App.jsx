@@ -1,12 +1,23 @@
-import './App.css'
-import Home from './components/Home'
+import './assets/style/index';
+import { Header, Home, Projects, Contacts, Footer, NavText } from './components/index';
 
 function App() {
-  return (
-    <>
-      <Home />
-    </>
-  )
+    return (
+        <>
+            <div className="root-wrapper">
+                <Header />
+                <div className="split d-lg-flex">
+                    <main className="container">
+                        <Home />
+                        <Projects />
+                        <Contacts />
+                    </main>
+                    <Footer />
+                    <NavText />
+                </div>
+            </div>
+        </>
+    );
 }
 
-export default App
+export default App;
