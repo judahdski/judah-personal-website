@@ -1,4 +1,4 @@
-function Contacts() {
+const Contacts = () => {
     return (
         <section id="contacts" className="contacts justify-content-center align-items-stretch">
             <div

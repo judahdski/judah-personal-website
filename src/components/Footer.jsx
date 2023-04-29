@@ -1,4 +1,4 @@
-function Footer() {
+const Footer = () => {
     return (
         <footer className="pb-5 d-lg-flex justify-content-center align-items-end">
             <div className="d-flex flex-column gap-3">

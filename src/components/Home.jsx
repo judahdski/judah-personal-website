@@ -1,4 +1,4 @@
-function Home() {
+const Home = () => {
     return (
         <section id="home" className="home justify-content-center align-items-center">
             <div className="home-text-content">

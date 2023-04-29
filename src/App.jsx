@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './assets/style/index';
 import { Header, Home, Projects, Contacts, Footer, NavText } from './components/index';
 
-function App() {
+const App = () => {
     return (
         <>
             <div className="root-wrapper">

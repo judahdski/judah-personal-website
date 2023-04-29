@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import regularLogo from '../assets/img/regular-logo.png';
 
-function Header() {
+const Header = () => {
     return (
         <header
             className="

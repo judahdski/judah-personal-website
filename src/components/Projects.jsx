@@ -1,4 +1,4 @@
-function Projects() {
+const Projects = () => {
     return (
         <section id="projects" className="projects pt-4 px-lg-4 pb-5 py-lg-3 justify-content-center align-items-center">
             <div className="py-3 py-lg-4 d-flex flex-column justify-content-lg-center align-content-lg-start gap-4">
