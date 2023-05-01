@@ -1,23 +1,22 @@
+import { projects } from "../assets/data";
+
 const Projects = () => {
     return (
-        <section id="projects" className="projects pt-4 px-lg-4 pb-5 py-lg-3 justify-content-center align-items-center">
-            <div className="py-3 py-lg-4 d-flex flex-column justify-content-lg-center align-content-lg-start gap-4">
-                <div className="project-card p-3 d-flex flex-column flex-lg-row gap-3 gap-lg-4">
-                    <img src="" />
-                    <div className="d-lg-flex flex-column justify-content-between">
-                        <div className="project-description d-flex flex-column gap-3">
-                            <p className="mb-0">Jhon Doe 3D Portfolio</p>
-                            <p className="mb-0">
-                                Website portfolio 3D ini dibangun menggunakan teknologi React JS, Tailwind, dan Three JS. Dengan antarmuka yang interaktif dan responsif, membuat website ini menjadi platform yang menarik untuk menampilkan
-                                portofolio seni 3D.
-                            </p>
-                            <p className="mb-0">Tech stack : Javascript, React JS, Three JS, Tailwind</p>
+        <section id="projects" className="px-4 md:px-8 flex justify-center items-center">
+            <div className="pt-4 md:pt-6 w-full h-full flex flex-col justify-start items-center gap-4 md:gap-6 overflow-y-scroll">
+                {projects.map((project, index) => (
+                    <div key={index} className="bg-mainColor w-full max-w-[360px] md:w-full md:max-w-[1000px] p-3 border-solid border-2 border-[#F75959] flex flex-col gap-3 md:flex-row md:gap-6">
+                        <img src={project.imageURL} alt={project.name} className='w-full bg-black aspect-video md:basis-1/3 object-cover' />
+                        <div className="text-white md:basis-2/3">
+                            <h4 className="font-semibold">{project.name}</h4>
+                            <div className="pt-2 pb-4">
+                                <p className="pb-2 opacity-75">{project.description}</p>
+                                <p>Tech stack : {project.techStack}</p>
+                            </div>
+                            <a href={project.siteLink} className="text-[#F75959]">VISIT WEBSITE</a>
                         </div>
-                        <a href="https://jhondoe-portfolio.netlify.app/" target="blank">
-                            VISIT WEBSITE
-                        </a>
                     </div>
-                </div>
+                ))}
             </div>
         </section>
     );

@@ -1,6 +1,6 @@
 const Home = () => {
     return (
-        <section id="home" className="home justify-content-center align-items-center">
+        <section id="home" className="home h-full justify-content-center align-items-center">
             <div className="home-text-content">
                 <p className="py-2 px-3 px-lg-4 mb-0">I AM</p>
                 <i>JUDAH</i>

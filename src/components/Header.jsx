@@ -1,33 +1,39 @@
 import { NavLink } from 'react-router-dom';
 import regularLogo from '../assets/img/regular-logo.png';
 
-const Header = () => {
+const Header = ({ navButtonOnClick }) => {
     return (
         <header
             className="
-            px-4 px-lg-5 
-            d-flex justify-content-between align-items-center
+            h-[60px] md:h-20 text-white
+            px-6 md:px-5 
+            flex justify-between items-center
         "
         >
-            <a href="/" className="nav-btn" data-section="home">
-                <img src={regularLogo} className="logo" />
+            <a href="/">
+                <img src={regularLogo} className="w-8 md:w-12 aspect-square" />
             </a>
             <nav
                 className="
-                p-3 p-lg-2
-                d-flex flex-column flex-lg-row align-items-stretch .align-items-lg-center gap-4   
+                p-4 md:h-full md:p-0
+                flex flex-col md:flex-row items-stretch md:items-center gap-6   
             "
             >
-                <span className="p-2" style={{ display: 'inline-block' }}>
+                <span className='md:hidden'>
                     <i className="fa-solid fa-xmark" id="closeBtn"></i>
                 </span>
-                
-                <NavLink to='/projects' className={'nav-btn text-center p-3 pb-4 text-decoration-none'}>PROJECTS</NavLink>
-                <NavLink to='/contacts' className={'nav-btn text-center p-3 pb-4 text-decoration-none'}>CONTACT</NavLink>
+                <NavLink to="/projects" className="p-4 pb-6 md:pb-0 tracking-widest" onClick={() => navButtonOnClick('PROJECTS')}>
+                    PROJECTS
+                </NavLink>
+                <NavLink to="/contacts" className="p-4 pb-6 md:pb-0 tracking-widest" onClick={() => navButtonOnClick('CONTACT')}>
+                    CONTACT
+                </NavLink>
             </nav>
-            <i className="fa-solid fa-align-right mobile-nav" id="hamburgerBtn"></i>
+            <span className='md:hidden'>
+                <i className="fa-solid fa-align-right" id="hamburgerBtn"></i>
+            </span>
         </header>
     );
-}
+};
 
 export default Header;

@@ -1,20 +1,19 @@
+import { socialMedias } from '../assets/data';
+
 const Footer = () => {
     return (
-        <footer className="pb-5 d-lg-flex justify-content-center align-items-end">
-            <div className="d-flex flex-column gap-3">
-                <a href="https://www.linkedin.com/in/judahdasuki/">
-                    <span style={{ color: 'white', fontSize: '24px' }}>
-                        <i className="fa-brands fa-linkedin" />
-                    </span>
-                </a>
-                <a href="https://github.com/judahdski">
-                    <span style={{ color: 'white', fontSize: '24px' }}>
-                        <i className="fa-brands fa-github" />
-                    </span>
-                </a>
+        <footer className="hidden md:h-full md:px-12 md:pb-[92px] md:flex md:justify-center md:items-end">
+            <div className="flex flex-col gap-3">
+                {socialMedias.map((socialMedia, index) => (
+                    <a href={socialMedia.link} key={index}>
+                        <span style={{ color: 'white', fontSize: '24px' }}>
+                            <i className={socialMedia.icon} />
+                        </span>
+                    </a>
+                ))}
             </div>
         </footer>
     );
-}
+};
 
 export default Footer;

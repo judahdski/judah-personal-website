@@ -1,10 +1,12 @@
-const projects = [
+import {aboutSpainWeb, chrismastWeb, jhondoe3DPortfolio, jTodoList, judskyCalculator, mandiri, museumPos, theSportsId} from '../img/projects/index';
+
+export const projects = [
     {
         name: 'Jhon Doe 3D Portfolio',
         description:
             'Website portfolio 3D ini dibangun menggunakan teknologi React JS, Tailwind, dan Three JS. Dengan antarmuka yang interaktif dan responsif, membuat website ini menjadi platform yang menarik untuk menampilkan portofolio seni 3D.',
         techStack: 'Javascript, React JS, Three JS, Tailwind',
-        imageURL: '',
+        imageURL: jhondoe3DPortfolio,
         siteLink: 'https://jhondoe-portfolio.netlify.app/',
         githubLink: '',
     },
@@ -12,7 +14,7 @@ const projects = [
         name: 'JudSky Calculator',
         description: 'Website calculator simple yang memiliki tampilan keren.',
         techStack: 'Javascript, React JS',
-        imageURL: '',
+        imageURL: judskyCalculator,
         siteLink: 'https://judsky-calculator.netlify.app/',
         githubLink: '',
     },
@@ -20,7 +22,7 @@ const projects = [
         name: 'theSports-id',
         description: 'Website yang menyediakan berita dan blog seputar olahraga adalah situs yang menyajikan informasi terkini seputar dunia olahraga, termasuk artikel, berita, ulasan.',
         techStack: 'HTML 5, CSS 3, JavaScript, PHP, Laravel',
-        imageURL: '',
+        imageURL: theSportsId,
         siteLink: 'https://thesport-id.000webhostapp.com/',
         githubLink: '',
     },
@@ -28,7 +30,7 @@ const projects = [
         name: 'Responsive Christmas Website',
         description: 'Website static bertema Christmas yang memiliki responsive design.',
         techStack: 'HTML 5, CSS 3, JavaScript',
-        imageURL: '',
+        imageURL: chrismastWeb,
         siteLink: 'https://christmas-judah.netlify.app/',
         githubLink: '',
     },
@@ -36,15 +38,15 @@ const projects = [
         name: 'JTodo List',
         description: '',
         techStack: 'HTML 5, CSS 3, JavaScript',
-        imageURL: '',
+        imageURL: jTodoList,
         siteLink: 'https://jtodo-list.netlify.app/',
         githubLink: '',
     },
 ];
 
-const contact = {
+export const contact = {
     email: 'judahjmdasuki@gmail.com',
-    phoneNumber: '+62 813 87306360',
+    phoneNumber: '+6281387306360',
 };
 
 const navs = [
@@ -61,3 +63,18 @@ const navs = [
         hrefURL: '#contacts',
     },
 ];
+
+export const socialMedias = [
+    {
+        icon: 'fa-brands fa-linkedin',
+        link: 'https://www.linkedin.com/in/judahdasuki/',
+    },
+    {
+        icon: 'fa-brands fa-github',
+        link: 'https://www.linkedin.com/in/judahdasuki/',
+    },
+    {
+        icon: 'fa-brands fa-twitter',
+        link: 'https://twitter.com/judahdskh',
+    },
+]

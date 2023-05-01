@@ -1,14 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
 import './assets/style/index';
 import { Header, Home, Projects, Contacts, Footer, NavText } from './components/index';
+import { useState } from 'react';
 
 const App = () => {
+    const [navText, setNavText] = useState('HOME');
+
+    const setNavTextHandle = (text) => setNavText(text);
+
     return (
         <>
-            <div className="root-wrapper">
-                <Header />
+            <div className=".root-wrapper">
+                <Header navButtonOnClick={setNavTextHandle} />
                 <div className="split d-lg-flex">
-                    <main className="container">
+                    <main className="w-full h-full overflow-scroll md:relative order-2">
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/projects" element={<Projects />} />
@@ -16,11 +21,11 @@ const App = () => {
                         </Routes>
                     </main>
                     <Footer />
-                    <NavText />
+                    <NavText textContent={navText} />
                 </div>
             </div>
         </>
     );
-}
+};
 
 export default App;

@@ -1,8 +1,8 @@
-const NavText = () => {
+const NavText = ({textContent}) => {
     return (
-        <div className="nav-text d-lg-flex justify-content-end align-items-center">
-            <p id="navText" className="mb-0">
-                home
+        <div className="nav-text w-24 h-full hidden md:flex justify-center items-end md:pb-28 order-3">
+            <p id="navText" className="mb-0 text-white font-semibold rotate-90">
+                {textContent}
             </p>
         </div>
     );

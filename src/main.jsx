@@ -25,16 +25,3 @@ if (hr >= 0 && hr < 12) {
 } else {
     document.title += ' Malam! 🌆';
 }
-
-// hamburger button
-const hamburgerButton = document.getElementById('hamburgerBtn');
-
-hamburgerButton.addEventListener('click', () => {
-    document.querySelector('nav').style.top = 0;
-});
-
-const closeNavBtn = document.getElementById('closeBtn');
-
-closeNavBtn.addEventListener('click', () => {
-    document.querySelector('nav').style.top = '-100%';
-});
