@@ -1,4 +1,4 @@
-import {aboutSpainWeb, chrismastWeb, jhondoe3DPortfolio, jTodoList, judskyCalculator, mandiri, museumPos, theSportsId} from '../img/projects/index';
+import {aboutSpainWeb, chrismastWeb, jhondoe3DPortfolio, jTodoList, judskyCalculator, mandiri, museumPos, theSportsId, helpdeskPospay} from '../img/projects/index';
 
 export const projects = [
     {
@@ -40,6 +40,14 @@ export const projects = [
         techStack: 'HTML 5, CSS 3, JavaScript',
         imageURL: jTodoList,
         siteLink: 'https://jtodo-list.netlify.app/',
+        githubLink: '',
+    },
+    {
+        name: 'POSPAY Helpdesk',
+        description: '',
+        techStack: 'React JS, Tailwind CSS, JavaScript',
+        imageURL: helpdeskPospay,
+        siteLink: 'https://helpdesk-pospay-ext-rivaldo.netlify.app/',
         githubLink: '',
     },
 ];
