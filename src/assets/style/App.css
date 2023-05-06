@@ -5,32 +5,16 @@
     --main-color: hsl(0, 0%, 11%);
     --text-color: hsl(0, 0%, 100%);
     --second-text-color: hsla(0, 0%, 100%, 0.65);
-}
-
-.root-wrapper {
-    width: 100vw;
-    height: 100vh;
-}
+} 
 
 /* home */
-section.home {
-    color: white;
-
-    display: flex;
-}
-
-.home-text-content p {
-    opacity: 0.6;
-}
-
-.home-text-content i {
-    font-size: 4.571em;
-    font-weight: 800;
+section#home {
+    height: calc(100vh - 60px);
 }
 
 @media screen and (min-width: 768px) {
-    .home-text-content i {
-        font-size: 8em;
+    section#home{
+        height: calc(100vh - 80px);
     }
 }
 

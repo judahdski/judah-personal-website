@@ -3,7 +3,7 @@ import { projects } from "../assets/data";
 const Projects = () => {
     return (
         <section id="projects" className="px-4 md:px-8 flex justify-center items-center">
-            <div className="pt-4 md:pt-6 w-full h-full flex flex-col justify-start items-center gap-4 md:gap-6 overflow-y-scroll">
+            <div className="pt-4 pb-6 md:pt-6 md:pb-8 w-full h-full flex flex-col justify-start items-center gap-4 md:gap-6 overflow-y-scroll">
                 {projects.map((project, index) => (
                     <div key={index} className="bg-[#1c1c1c] w-full max-w-[360px] md:w-full md:max-w-[1000px] p-3 border-solid border-2 border-[#F75959] flex flex-col gap-3 md:flex-row md:gap-6">
                         <img src={project.imageURL} alt={project.name} className="w-full bg-black aspect-video md:basis-1/3 object-cover" />

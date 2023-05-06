@@ -10,9 +10,9 @@ const App = () => {
 
     return (
         <>
-            <div className=".root-wrapper">
-                <Header navButtonOnClick={setNavTextHandle} />
-                <div className="split d-lg-flex">
+            <div className="w-screen h-screen">
+                <Header navButtonOnClick={setNavTextHandle} navText />
+                <div className="split md:flex">
                     <main className="w-full h-full overflow-scroll md:relative order-2">
                         <Routes>
                             <Route path="/" element={<Home />} />
