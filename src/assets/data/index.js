@@ -78,11 +78,11 @@ export const socialMedias = [
         link: 'https://www.linkedin.com/in/judahdasuki/',
     },
     {
-        icon: 'fa-brands fa-github',
-        link: 'https://www.linkedin.com/in/judahdasuki/',
-    },
-    {
         icon: 'fa-brands fa-twitter',
         link: 'https://twitter.com/judahdskh',
+    },
+    {
+        icon: 'fa-brands fa-github',
+        link: 'https://www.linkedin.com/in/judahdasuki/',
     },
 ]

@@ -30,7 +30,7 @@ const Header = ({ navButtonOnClick }) => {
                 </span>
                 <NavLink
                     to="/projects"
-                    className="p-4 pb-6 md:pb-0 tracking-widest"
+                    className="p-4 pb-6 resume md:pb-0 hover:md:px-4 hover:md:py-2 hover:border hover:rounded-xl active:bg-white active:opacity-60 active:text-black tracking-widest"
                     onClick={() => {
                         setNavMenuActive(!navMenuActive);
                         navButtonOnClick('PROJECTS');
@@ -39,8 +39,18 @@ const Header = ({ navButtonOnClick }) => {
                     PROJECTS
                 </NavLink>
                 <NavLink
+                    to="/"
+                    className="p-4 pb-6 resume md:pb-0 hover:md:px-4 hover:md:py-2 hover:border hover:rounded-xl active:bg-white active:opacity-60 active:text-black tracking-widest"
+                    onClick={() => {
+                        // setNavMenuActive(!navMenuActive);
+                        // navButtonOnClick('PROJECTS');
+                    }}
+                >
+                    RESUME
+                </NavLink>
+                <NavLink
                     to="/contacts"
-                    className="p-4 pb-6 md:pb-0 tracking-widest"
+                    className="p-4 pb-6 resume md:pb-0 hover:md:px-4 hover:md:py-2 hover:border hover:rounded-xl active:bg-white active:opacity-60 active:text-black tracking-widest"
                     onClick={() => {
                         setNavMenuActive(!navMenuActive);
                         navButtonOnClick('CONTACT');
