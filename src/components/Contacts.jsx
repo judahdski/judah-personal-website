@@ -1,4 +1,4 @@
-import { contact } from "../assets/data";
+import { contact } from '../assets/data';
 
 const Contacts = () => {
     return (
@@ -9,14 +9,12 @@ const Contacts = () => {
                 </h1>
                 <hr />
                 <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-                    <a 
-                        href={`mailto:${contact.email}`} 
-                        className="inline-block text-center py-3 w-full border-solid border-[1px] border-[#F75959] hover:bg-[#F75959] hover:text-[#fff] ease-in duration-100"
-                        >{contact.email}</a>
-                    <a 
-                        href={`tel:${contact.phoneNumber}`} 
-                        className="inline-block text-center py-3 w-full border-solid border-[1px] border-[#F75959] hover:bg-[#F75959] hover:text-[#fff] ease-in duration-100"
-                        >{contact.phoneNumber}</a>
+                    <a href={`mailto:${contact.email}`} className="inline-block text-center py-3 w-full border-solid border-[1px] rounded-xl border-[#fff] hover:bg-[#f2f2f2] hover:text-[#000] ease-in duration-100">
+                        {contact.email}
+                    </a>
+                    <a href={`tel:${contact.phoneNumber}`} className="inline-block text-center py-3 w-full border-solid border-[1px] rounded-xl border-[#fff] hover:bg-[#f2f2f2] hover:text-[#000] ease-in duration-100">
+                        {contact.phoneNumber}
+                    </a>
                 </div>
             </div>
         </section>

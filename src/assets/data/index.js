@@ -5,7 +5,13 @@ export const projects = [
         name: 'Jhon Doe 3D Portfolio',
         description:
             'Website portfolio 3D ini dibangun menggunakan teknologi React JS, Tailwind, dan Three JS. Dengan antarmuka yang interaktif dan responsif, membuat website ini menjadi platform yang menarik untuk menampilkan portofolio seni 3D.',
-        techStack: 'Javascript, React JS, Three JS, Tailwind',
+        category: {
+            techStack: ['JavaScript', 'React.JS', 'Three.JS', 'Tailwind CSS'],
+            type: {
+                code: 'ptfl',
+                title: 'Personal Portfolio'
+            },
+        },
         imageURL: jhondoe3DPortfolio,
         siteLink: 'https://jhondoe-portfolio.netlify.app/',
         githubLink: '',
@@ -13,7 +19,13 @@ export const projects = [
     {
         name: 'JudSky Calculator',
         description: 'Website calculator simple yang memiliki tampilan keren.',
-        techStack: 'Javascript, React JS',
+        category: {
+            techStack: ['JavaScript', 'React.JS'],
+            type: {
+                code: 'ftnt',
+                title: 'Functionality'
+            },
+        },
         imageURL: judskyCalculator,
         siteLink: 'https://judsky-calculator.netlify.app/',
         githubLink: '',
@@ -21,7 +33,13 @@ export const projects = [
     {
         name: 'theSports-id',
         description: 'Website yang menyediakan berita dan blog seputar olahraga adalah situs yang menyajikan informasi terkini seputar dunia olahraga, termasuk artikel, berita, ulasan.',
-        techStack: 'HTML 5, CSS 3, JavaScript, PHP, Laravel',
+        category: {
+            techStack: ['HTML5 & CSS3', 'JavaScript', 'PHP', 'Laravel'],
+            type: {
+                code: 'ftnt',
+                title: 'Blog'
+            },
+        },
         imageURL: theSportsId,
         siteLink: 'https://thesport-id.000webhostapp.com/',
         githubLink: '',
@@ -30,6 +48,13 @@ export const projects = [
         name: 'Responsive Christmas Website',
         description: 'Website static bertema Christmas yang memiliki responsive design.',
         techStack: 'HTML 5, CSS 3, JavaScript',
+        category: {
+            techStack: ['HTML5 & CSS3', 'JavaScript'],
+            type: {
+                code: 'ftnt',
+                title: 'Landing Page'
+            },
+        },
         imageURL: chrismastWeb,
         siteLink: 'https://christmas-judah.netlify.app/',
         githubLink: '',
@@ -37,7 +62,13 @@ export const projects = [
     {
         name: 'JTodo List',
         description: '',
-        techStack: 'HTML 5, CSS 3, JavaScript',
+        category: {
+            techStack: ['HTML5 & CSS3', 'JavaScript', 'PHP', 'Laravel'],
+            type: {
+                code: 'ftnt',
+                title: 'Functionality'
+            },
+        },
         imageURL: jTodoList,
         siteLink: 'https://jtodo-list.netlify.app/',
         githubLink: '',
@@ -46,6 +77,13 @@ export const projects = [
         name: 'POSPAY Helpdesk',
         description: '',
         techStack: 'React JS, Tailwind CSS, JavaScript',
+        category: {
+            techStack: ['JavaScript', 'React.JS', 'Tailwind CSS'],
+            type: {
+                code: 'ftnt',
+                title: 'Dashboard Management System'
+            },
+        },
         imageURL: helpdeskPospay,
         siteLink: 'https://helpdesk-pospay-ext-rivaldo.netlify.app/',
         githubLink: '',
@@ -54,7 +92,7 @@ export const projects = [
 
 export const contact = {
     email: 'judahjmdasuki@gmail.com',
-    phoneNumber: '+6281387306360',
+    phoneNumber: '(+62)81387306360',
 };
 
 const navs = [

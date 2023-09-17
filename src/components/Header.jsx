@@ -30,7 +30,7 @@ const Header = ({ navButtonOnClick }) => {
                 </span>
                 <NavLink
                     to="/projects"
-                    className="p-4 pb-6 resume md:pb-0 hover:md:px-4 hover:md:py-2 hover:border hover:rounded-xl active:bg-white active:opacity-60 active:text-black tracking-widest"
+                    className="p-4 pb-6 resume tracking-widest md:px-4 md:py-2 border-black rounded-xl font-medium hover:border-white active:bg-white active:opacity-60 active:text-black"
                     onClick={() => {
                         setNavMenuActive(!navMenuActive);
                         navButtonOnClick('PROJECTS');
@@ -40,7 +40,7 @@ const Header = ({ navButtonOnClick }) => {
                 </NavLink>
                 <NavLink
                     to="/"
-                    className="p-4 pb-6 resume md:pb-0 hover:md:px-4 hover:md:py-2 hover:border hover:rounded-xl active:bg-white active:opacity-60 active:text-black tracking-widest"
+                    className="p-4 pb-6 resume tracking-widest md:px-4 md:py-2 rounded-xl font-medium active:border-white active:bg-white active:opacity-60 active:text-black"
                     onClick={() => {
                         // setNavMenuActive(!navMenuActive);
                         // navButtonOnClick('PROJECTS');
@@ -50,7 +50,7 @@ const Header = ({ navButtonOnClick }) => {
                 </NavLink>
                 <NavLink
                     to="/contacts"
-                    className="p-4 pb-6 resume md:pb-0 hover:md:px-4 hover:md:py-2 hover:border hover:rounded-xl active:bg-white active:opacity-60 active:text-black tracking-widest"
+                    className="p-4 pb-6 resume tracking-widest md:px-4 md:py-2 border-black rounded-xl font-medium hover:border-white active:bg-white active:opacity-60 active:text-black"
                     onClick={() => {
                         setNavMenuActive(!navMenuActive);
                         navButtonOnClick('CONTACT');
