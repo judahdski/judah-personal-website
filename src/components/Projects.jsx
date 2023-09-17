@@ -19,7 +19,7 @@ const ProjectCards = ({ project, index }) => {
     return (
         <div
             key={index}
-            className="bg-[#292929] w-full max-w-[360px] md:w-full md:max-w-[405px] border-solid border-2 border-white rounded-2xl flex flex-col overflow-hidden shadow shadow-white transition-transform"
+            className="bg-[#292929] w-full max-w-[360px] md:w-full md:max-w-[405px] min-h-[367px] border-solid border-2 border-white rounded-2xl flex flex-col overflow-hidden shadow-md shadow-[#ffffff55] transition"
             onClick={() => {
                 setIsHover((oldState) => !oldState);
             }}
@@ -30,13 +30,14 @@ const ProjectCards = ({ project, index }) => {
                 <h4 className="font-semibold text-white absolute bottom-6 left-4 z-20">{project.name}</h4>
             </div>
             <div className="text-white md:basis-2/3 p-6">
-                <div className="flex overflow-x-scroll gap-2">
+                <div className="flex flex-wrap gap-2">
                     <p className="py-1 px-2 text-[#FF7C7C] text-sm bg-[#ff7c7c44] rounded-md">{project.category.type.title}</p>
                     <p className="py-1 px-2 text-[#88E1F2] text-sm bg-[#88e0f24d] rounded-md">{project.category.techStack[0]}</p>
+                    <p className="py-1 px-2 text-[#88E1F2] text-sm bg-[#88e0f24d] rounded-md">{project.category.techStack[1]}</p>
                 </div>
                 {isHover ? <p className="opacity-75 mt-4">{project.description}</p> : <></>}
                 <div className="w-full flex gap-3 mt-6">
-                    <a href={project.siteLink} className="text-[#8758FF] font-semibold w-full bg-[#DED1FF] rounded-lg flex items-center justify-center">
+                    <a href={project.siteLink} target='_blank' className="text-[#8758FF] font-semibold w-full bg-[#DED1FF] rounded-lg flex items-center justify-center">
                         <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
                     </a>
                     <a href="..." className="aspect-square h-[40px] bg-white rounded-lg flex items-center justify-center">

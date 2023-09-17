@@ -81,7 +81,7 @@ export const projects = [
             techStack: ['JavaScript', 'React.JS', 'Tailwind CSS'],
             type: {
                 code: 'ftnt',
-                title: 'Dashboard Management System'
+                title: 'Dashboard'
             },
         },
         imageURL: helpdeskPospay,
