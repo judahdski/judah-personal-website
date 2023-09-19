@@ -4,7 +4,7 @@ import { projects } from '../assets/data';
 const Projects = () => {
     return (
         <section id="projects" className="px-4 md:px-8 flex justify-center items-center">
-            <div className="pt-4 pb-6 md:pt-6 md:pb-8 w-full h-full flex flex-col md:flex-row md:flex-wrap justify-center items-start gap-4 md:gap-6 overflow-y-scroll scrollbar-hide">
+            <div className="pt-4 pb-6 md:pt-6 md:pb-8 w-full h-full flex flex-wrap justify-center items-start gap-4 md:gap-6 overflow-y-scroll scrollbar-hide">
                 {projects.map((project, index) => (
                     <ProjectCards project={project} index={index} />
                 ))}
@@ -19,7 +19,7 @@ const ProjectCards = ({ project, index }) => {
     return (
         <div
             key={index}
-            className="bg-[#292929] w-full max-w-[360px] md:w-full md:max-w-[405px] min-h-[367px] border-solid border-2 border-white rounded-2xl flex flex-col overflow-hidden shadow-md shadow-[#ffffff55] transition"
+            className="bg-[#292929] w-full max-w-[360px] md:w-full md:max-w-[405px] border-solid border-2 border-white rounded-2xl flex flex-col overflow-hidden shadow-md shadow-[#ffffff55] transition"
             onClick={() => {
                 setIsHover((oldState) => !oldState);
             }}
