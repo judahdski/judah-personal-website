@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import regularLogo from '../assets/img/regular-logo.png';
+import { menus, socialMedias } from '../assets/data';
 
 const Header = ({ navButtonOnClick }) => {
     const [navMenuActive, setNavMenuActive] = useState(false);
@@ -17,47 +18,31 @@ const Header = ({ navButtonOnClick }) => {
                 <img src={regularLogo} className="w-8 md:w-12 aspect-square" />
             </a>
             <nav
-                className={`bg-[#1c1c1c] p-4 md:h-full md:p-0
-                flex flex-col md:flex-row items-stretch md:items-center gap-6 text-center absolute inset-x-0 shadow transition z-10 ${navMenuActive ? 'top-0' : '-top-full'} md:static md:shadow-none`}
+                className={`
+                bg-[#1c1c1c6d] md:bg-[#1c1c1c] 
+                p-4 md:h-full md:p-0
+                flex flex-row items-end md:items-center justify-center gap-6 
+                text-center transition z-10 
+                ${navMenuActive ? 'top-0 bottom-0' : '-top-full'} absolute inset-x-0 md:static 
+                shadow md:shadow-none`}
+                onClick={() => {
+                    setNavMenuActive(!navMenuActive);
+                }}
             >
-                <span
-                    className="md:hidden px-4 py-3 text-end"
-                    onClick={() => {
-                        setNavMenuActive(!navMenuActive);
-                    }}
-                >
-                    <i className="fa-solid fa-xmark" id="closeBtn"></i>
-                </span>
-                <NavLink
-                    to="/projects"
-                    className="px-4 py-2 font-medium text-base tracking-wider border border-[#1c1c1c] hover:border-white rounded-xl active:border-white active:bg-[#ffffffaf] active:text-black"
-                    onClick={() => {
-                        setNavMenuActive(!navMenuActive);
-                        navButtonOnClick('PROJECTS');
-                    }}
-                >
-                    PROJECTS
-                </NavLink>
-                <NavLink
-                    to="/"
-                    className="px-4 py-2 font-medium text-base tracking-wider border border-[#1c1c1c] hover:border-white rounded-xl active:border-white active:bg-[#ffffffaf] active:text-black"
-                    onClick={() => {
-                        // setNavMenuActive(!navMenuActive);
-                        // navButtonOnClick('PROJECTS');
-                    }}
-                >
-                    RESUME
-                </NavLink>
-                <NavLink
-                    to="/contacts"
-                    className="px-4 py-2 font-medium text-base tracking-wider border border-[#1c1c1c] hover:border-white rounded-xl active:border-white active:bg-[#ffffffaf] active:text-black"
-                    onClick={() => {
-                        setNavMenuActive(!navMenuActive);
-                        navButtonOnClick('CONTACT');
-                    }}
-                >
-                    CONTACT
-                </NavLink>
+                {menus.map(({ path, title }, index) => (
+                    <NavLink
+                        key={index}
+                        to={path}
+                        className="px-4 py-2 font-medium text-base tracking-wider border border-[#1c1c1c] hover:border-white rounded-xl active:border-white active:bg-[#ffffffaf] active:text-black hidden md:block"
+                        onClick={() => {
+                            setNavMenuActive(!navMenuActive);
+                            navButtonOnClick(title);
+                        }}
+                    >
+                        {title}
+                    </NavLink>
+                ))}
+                <MobileMenu />
             </nav>
             <span
                 className="md:hidden px-4 py-3"
@@ -70,5 +55,32 @@ const Header = ({ navButtonOnClick }) => {
         </header>
     );
 };
+
+const MobileMenu = () => (
+    <div className="p-6 w-[320px] bg-[#292929] border border-white rounded-[18px] flex flex-col gap-4">
+        {menus.map(({ path, title }, index) => (
+            <NavLink
+                key={index}
+                to={path}
+                className="py-4 font-medium text-sm tracking-widest bg-white text-black rounded-xl active:border-white active:bg-[#292929] active:text-white"
+                onClick={() => {
+                    setNavMenuActive(!navMenuActive);
+                    navButtonOnClick(title);
+                }}
+            >
+                {title}
+            </NavLink>
+        ))}
+        <div className="mt-12 flex justify-center gap-9">
+            {socialMedias.map((socialMedia, index) => (
+                <a href={socialMedia.link} key={index}>
+                    <span style={{ color: 'white', fontSize: '24px' }}>
+                        <i className={socialMedia.icon} />
+                    </span>
+                </a>
+            ))}
+        </div>
+    </div>
+);
 
 export default Header;

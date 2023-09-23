@@ -124,3 +124,18 @@ export const socialMedias = [
         link: 'https://www.linkedin.com/in/judahdasuki/',
     },
 ]
+
+export const menus = [
+    {
+        path: '/projects',
+        title: 'PROJECTS',
+    },
+    {
+        path: '/',
+        title: 'RESUME',
+    },
+    {
+        path: '/contacts',
+        title: 'CONTACT',
+    },
+];
