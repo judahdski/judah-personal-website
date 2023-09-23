@@ -15,6 +15,7 @@ export const projects = [
         imageURL: jhondoe3DPortfolio,
         siteLink: 'https://jhondoe-portfolio.netlify.app/',
         githubLink: '',
+        isMobileResponsive: true,
     },
     {
         name: 'JudSky Calculator',
@@ -29,6 +30,7 @@ export const projects = [
         imageURL: judskyCalculator,
         siteLink: 'https://judsky-calculator.netlify.app/',
         githubLink: '',
+        isMobileResponsive: true,
     },
     {
         name: 'theSports-id',
@@ -43,6 +45,7 @@ export const projects = [
         imageURL: theSportsId,
         siteLink: 'https://thesport-id.000webhostapp.com/',
         githubLink: '',
+        isMobileResponsive: false,
     },
     {
         name: 'Responsive Christmas Website',
@@ -58,6 +61,7 @@ export const projects = [
         imageURL: chrismastWeb,
         siteLink: 'https://christmas-judah.netlify.app/',
         githubLink: '',
+        isMobileResponsive: true,
     },
     {
         name: 'JTodo List',
@@ -72,6 +76,7 @@ export const projects = [
         imageURL: jTodoList,
         siteLink: 'https://jtodo-list.netlify.app/',
         githubLink: '',
+        isMobileResponsive: true,
     },
     {
         name: 'POSPAY Helpdesk',
@@ -87,6 +92,7 @@ export const projects = [
         imageURL: helpdeskPospay,
         siteLink: 'https://helpdesk-pospay-ext-rivaldo.netlify.app/',
         githubLink: '',
+        isMobileResponsive: false,
     },
 ];
 
@@ -127,15 +133,15 @@ export const socialMedias = [
 
 export const menus = [
     {
-        path: '/projects',
+        path: 'projects',
         title: 'PROJECTS',
     },
     {
-        path: '/',
+        path: '',
         title: 'RESUME',
     },
     {
-        path: '/contacts',
+        path: 'contacts',
         title: 'CONTACT',
     },
 ];

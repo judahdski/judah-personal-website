@@ -36,9 +36,21 @@ const ProjectCards = ({ project }) => {
                 </div>
                 {isHover ? <p className="opacity-75 mt-4">{project.description}</p> : <></>}
                 <div className="w-full flex gap-3 mt-6">
-                    <a href={project.siteLink} target="_blank" className="text-[#8758FF] font-semibold w-full bg-[#DED1FF] rounded-lg flex items-center justify-center">
-                        <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
-                    </a>
+                    {window.innerWidth < 768 ? (
+                        project.isMobileResponsive ? (
+                            <a href={project.siteLink} target="_blank" className="text-[#8758FF] font-semibold w-full bg-[#DED1FF] rounded-lg flex items-center justify-center">
+                                <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
+                            </a>
+                        ) : (
+                            <div onClick={() => alert('Tidak support untuk versi mobile.')} className="text-[#8758FF] font-semibold w-full bg-[#DED1FF] rounded-lg flex items-center justify-center cursor-pointer">
+                                <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
+                            </div>
+                        )
+                    ) : (
+                        <a href={project.siteLink} target="_blank" className="text-[#8758FF] font-semibold w-full bg-[#DED1FF] rounded-lg flex items-center justify-center">
+                            <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
+                        </a>
+                    )}
                     <a href="..." className="aspect-square h-[40px] bg-white rounded-lg flex items-center justify-center">
                         <i className="fa-brands fa-github text-2xl text-black"></i>
                     </a>

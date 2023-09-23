@@ -7,10 +7,11 @@ const App = () => {
     const [navText, setNavText] = useState('HOME');
 
     const setNavTextHandle = (text) => setNavText(text);
+    const innerHeight = window.innerHeight;
 
     return (
         <>
-            <div className="w-screen h-screen">
+            <div className={`w-screen h-[${innerHeight}px]`}>
                 <Header navButtonOnClick={setNavTextHandle} navText />
                 <div className="split md:flex">
                     <main className="w-full h-full overflow-scroll md:relative order-2">
