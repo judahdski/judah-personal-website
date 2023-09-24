@@ -58,36 +58,18 @@ const Header = ({ navButtonOnClick }) => {
 
 const MobileMenu = () => (
     <div className="p-6 w-[320px] bg-[#292929] border border-white rounded-[18px] flex flex-col gap-4 md:hidden">
-        <NavLink
-            to="/projects"
-            className="py-4 font-medium text-sm tracking-widest bg-white text-black rounded-xl active:border-white active:bg-[#292929] active:text-white"
-            onClick={() => {
-                setNavMenuActive(!navMenuActive);
-                navButtonOnClick(title);
-            }}
-        >
-            PROJECTS
-        </NavLink>
-        <NavLink
-            to="/"
-            className="py-4 font-medium text-sm tracking-widest bg-white text-black rounded-xl active:border-white active:bg-[#292929] active:text-white"
-            onClick={() => {
-                setNavMenuActive(!navMenuActive);
-                navButtonOnClick(title);
-            }}
-        >
-            RESUME
-        </NavLink>
-        <NavLink
-            to="/contacts"
-            className="py-4 font-medium text-sm tracking-widest bg-white text-black rounded-xl active:border-white active:bg-[#292929] active:text-white"
-            onClick={() => {
-                setNavMenuActive(!navMenuActive);
-                navButtonOnClick(title);
-            }}
-        >
-            CONTACT
-        </NavLink>
+        {menus.map(({ path, title }, index) => (
+            <NavLink
+                key={index}
+                to={`/${path}`}
+                className="py-4 font-medium text-sm tracking-widest bg-white text-black rounded-xl active:border-white active:bg-[#292929] active:text-white"
+                onClick={() => {
+                    setNavMenuActive(!navMenuActive);
+                }}
+            >
+                {title}
+            </NavLink>
+        ))}
         <div className="mt-12 flex justify-center gap-9">
             {socialMedias.map((socialMedia, index) => (
                 <a href={socialMedia.link} key={index}>

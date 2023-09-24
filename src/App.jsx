@@ -11,18 +11,20 @@ const App = () => {
 
     return (
         <>
-            <div className={`w-screen h-[${innerHeight}px]`}>
-                <Header navButtonOnClick={setNavTextHandle} navText />
-                <div className="split md:flex">
-                    <main className="w-full h-full overflow-scroll md:relative order-2">
-                        <Routes>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/projects" element={<Projects />} />
-                            <Route path="/contacts" element={<Contacts />} />
-                        </Routes>
-                    </main>
-                    <Footer />
-                    <NavText textContent={navText} />
+            <div className={`relative w-screen h-[${innerHeight}px]`}>
+                <div className="absolute top-0 bottom-0 left-0 right-0">
+                    <Header navButtonOnClick={setNavTextHandle} navText />
+                    <div className="split md:flex">
+                        <main className="w-full h-full overflow-scroll md:relative order-2">
+                            <Routes>
+                                <Route path="/" element={<Home />} />
+                                <Route path="/projects" element={<Projects />} />
+                                <Route path="/contacts" element={<Contacts />} />
+                            </Routes>
+                        </main>
+                        <Footer />
+                        <NavText textContent={navText} />
+                    </div>
                 </div>
             </div>
         </>
