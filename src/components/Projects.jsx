@@ -21,8 +21,7 @@ const ProjectCards = ({ project }) => {
             className="bg-[#292929] w-full max-w-[360px] md:w-full md:max-w-[405px] border-solid border-2 border-white rounded-2xl flex flex-col overflow-hidden shadow-md shadow-[#ffffff55] transition"
             onClick={() => {
                 setIsHover((oldState) => !oldState);
-            }}
-        >
+            }}>
             <div className="relative">
                 <img src={project.imageURL} alt={project.name} className="w-full bg-black aspect-video md:basis-1/3 object-cover" />
                 <div className="bg-gradient-to-t from-[#292929] from-5% via-[#242424e0] via-30% to-transparent to-90% absolute bottom-0 left-0 top-0 right-0 z-[1]"></div>
@@ -30,24 +29,24 @@ const ProjectCards = ({ project }) => {
             </div>
             <div className="text-white md:basis-2/3 p-6">
                 <div className="flex flex-wrap gap-2">
-                    <p className="py-1 px-2 text-[#FF7C7C] text-sm bg-[#ff7c7c44] rounded-md">{project.category.type.title}</p>
-                    <p className="py-1 px-2 text-[#88E1F2] text-sm bg-[#88e0f24d] rounded-md">{project.category.techStack[0]}</p>
-                    <p className="py-1 px-2 text-[#88E1F2] text-sm bg-[#88e0f24d] rounded-md">{project.category.techStack[1]}</p>
+                    <p className="py-1 px-2 text-[#1597BB] text-sm border-1 bg-[rgba(143,214,225,0.16)] rounded-md">{project.category.type.title}</p>
+                    <p className="py-1 px-2 text-[#FFC045] text-sm bg-[rgba(143,214,225,0.16)] rounded-md">{project.category.techStack[0]}</p>
+                    <p className="py-1 px-2 text-[#F30A49] text-sm bg-[rgba(143,214,225,0.16)] rounded-md">{project.category.techStack[1]}</p>
                 </div>
                 {isHover ? <p className="opacity-75 mt-4">{project.description}</p> : <></>}
                 <div className="w-full flex gap-3 mt-6">
                     {window.innerWidth < 768 ? (
-                        project.isMobileResponsive ? (
-                            <a href={project.siteLink} target="_blank" className="text-[#8758FF] font-semibold w-full bg-[#DED1FF] rounded-lg flex items-center justify-center">
+                        project.isMobile ? (
+                            <a href={project.siteLink} target="_blank" className="text-[#03c484] font-semibold w-full bg-[#03c4a152] rounded-lg flex items-center justify-center">
                                 <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
                             </a>
                         ) : (
-                            <div onClick={() => alert('Tidak support untuk versi mobile.')} className="text-[#8758FF] font-semibold w-full bg-[#DED1FF] rounded-lg flex items-center justify-center cursor-pointer">
+                            <div onClick={() => alert('Tidak support untuk versi mobile.')} className="text-[#03c4a152] font-semibold w-full bg-[#40A2D8] rounded-lg flex items-center justify-center cursor-pointer">
                                 <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
                             </div>
                         )
                     ) : (
-                        <a href={project.siteLink} target="_blank" className="text-[#8758FF] font-semibold w-full bg-[#DED1FF] rounded-lg flex items-center justify-center">
+                        <a href={project.siteLink} target="_blank" className="text-[#03c484] font-semibold w-full bg-[#03c4a152] rounded-lg flex items-center justify-center">
                             <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
                         </a>
                     )}

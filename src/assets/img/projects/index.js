@@ -7,5 +7,6 @@ import mandiri from './mandiri.png';
 import museumPos from './museum-pos.png';
 import theSportsId from './the-sportsid.png';
 import helpdeskPospay from './helpdesk-pospay.png';
+import hikeAssist from './hike-assist.png';
 
-export { aboutSpainWeb, chrismastWeb, jhondoe3DPortfolio, jTodoList, judskyCalculator, mandiri, museumPos, theSportsId, helpdeskPospay };
+export { aboutSpainWeb, chrismastWeb, jhondoe3DPortfolio, jTodoList, judskyCalculator, mandiri, museumPos, theSportsId, helpdeskPospay, hikeAssist };
