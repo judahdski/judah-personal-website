@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { projects } from '../assets/data';
+import { PROJECTS } from '../assets/data/projects';
 
 const Projects = () => {
     return (
         <section id="projects" className="px-4 md:px-8 flex justify-center items-center">
             <div className="pt-4 pb-6 md:pt-6 md:pb-8 w-full h-full flex flex-wrap justify-center items-start gap-4 md:gap-6 overflow-y-scroll scrollbar-hide">
-                {projects.map((project, index) => (
+                {PROJECTS.map((project, index) => (
                     <ProjectCards key={index} project={project} index={index} />
                 ))}
             </div>
@@ -18,7 +18,7 @@ const ProjectCards = ({ project }) => {
 
     return (
         <div
-            className="bg-[#292929] w-full max-w-[360px] md:w-full md:max-w-[405px] border-solid border-2 border-white rounded-2xl flex flex-col overflow-hidden shadow-md shadow-[#ffffff55] transition"
+            className="bg-[#292929] w-full max-w-[360px] md:w-full md:max-w-[405px] border-solid border-2 border-white rounded-2xl flex flex-col overflow-hidden shadow-md shadow-[#ffffff55] transition cursor-pointer"
             onClick={() => {
                 setIsHover((oldState) => !oldState);
             }}>
@@ -50,7 +50,7 @@ const ProjectCards = ({ project }) => {
                             <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
                         </a>
                     )}
-                    <a href="..." className="aspect-square h-[40px] bg-white rounded-lg flex items-center justify-center">
+                    <a href={project.githubLink} className="aspect-square h-[40px] bg-white rounded-lg flex items-center justify-center">
                         <i className="fa-brands fa-github text-2xl text-black"></i>
                     </a>
                 </div>
