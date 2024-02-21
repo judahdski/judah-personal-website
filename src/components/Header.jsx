@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import regularLogo from '../assets/img/regular-logo.png';
-import { menus, socialMedias } from '../assets/data';
+import { menus, socialMedias } from '../assets/constant';
 
 const Header = ({ navButtonOnClick }) => {
     const [navMenuActive, setNavMenuActive] = useState(false);

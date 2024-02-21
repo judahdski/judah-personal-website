@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PROJECTS } from '../assets/data/projects';
+import { PROJECTS } from '../assets/constant/projects';
 
 const Projects = () => {
     return (

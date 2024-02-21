@@ -1,4 +1,4 @@
-import { socialMedias } from '../assets/data';
+import { socialMedias } from '../assets/constant';
 
 const Footer = () => {
     return (

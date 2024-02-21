@@ -1,4 +1,4 @@
-import { contact } from '../assets/data';
+import { contact } from '../assets/constant';
 
 const Contacts = () => {
     return (
