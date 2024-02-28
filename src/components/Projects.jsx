@@ -18,39 +18,43 @@ const ProjectCards = ({ project }) => {
 
     return (
         <div
-            className="bg-[#292929] w-full max-w-[360px] md:w-full md:max-w-[405px] border-solid border-2 border-white rounded-2xl flex flex-col overflow-hidden shadow-md shadow-[#ffffff55] transition cursor-pointer"
+            className={`bg-[#1D1D1D] w-full max-w-[360px] md:w-full md:max-w-[405px] border-solid border-2 rounded-2xl flex flex-col overflow-hidden transition cursor-pointer ${project.utils.cardAppearance.backgroundColor} ${project.utils.cardAppearance.shadowColor}`}
             onClick={() => {
                 setIsHover((oldState) => !oldState);
             }}>
             <div className="relative">
-                <img src={project.imageURL} alt={project.name} className="w-full bg-black aspect-video md:basis-1/3 object-cover" />
-                <div className="bg-gradient-to-t from-[#292929] from-5% via-[#242424e0] via-30% to-transparent to-90% absolute bottom-0 left-0 top-0 right-0 z-[1]"></div>
-                <h4 className="font-semibold text-white absolute bottom-6 left-4 z-[2]">{project.name}</h4>
+                <img src={project.utils.thumbnailURL} alt={project.title} className="w-full bg-black aspect-video md:basis-1/3 object-cover" />
+                <div className="bg-gradient-to-t from-[#1D1D1D] from-5% via-[#1d1d1ddd] via-20% to-transparent to-90% absolute bottom-0 left-0 top-0 right-0 z-[1]"></div>
+                <h4 className="font-semibold text-white absolute bottom-6 left-4 z-[2]">{project.title}</h4>
             </div>
             <div className="text-white md:basis-2/3 p-6">
                 <div className="flex flex-wrap gap-2">
-                    <p className="py-1 px-2 text-[#1597BB] text-sm border-1 bg-[rgba(143,214,225,0.16)] rounded-md">{project.category.type.title}</p>
-                    <p className="py-1 px-2 text-[#FFC045] text-sm bg-[rgba(143,214,225,0.16)] rounded-md">{project.category.techStack[0]}</p>
-                    <p className="py-1 px-2 text-[#F30A49] text-sm bg-[rgba(143,214,225,0.16)] rounded-md">{project.category.techStack[1]}</p>
+                    <p className="py-1 px-2 text-white text-sm border border-white bg-transparent rounded-md">{project.category.title}</p>
+                    {project.techStack.map((tech, index) => (
+                        <p key={index} className={`py-1 px-2 text-sm rounded-md flex gap-2 items-center ${tech.style.background} ${tech.style.text}`}>
+                            <img src={tech.logoUrl} className="w-4 h4 rounded" />
+                            {tech.description}
+                        </p>
+                    ))}
                 </div>
                 {isHover ? <p className="opacity-75 mt-4">{project.description}</p> : <></>}
                 <div className="w-full flex gap-3 mt-6">
                     {window.innerWidth < 768 ? (
-                        project.isMobile ? (
-                            <a href={project.siteLink} target="_blank" className="text-[#03c484] font-semibold w-full bg-[#03c4a152] rounded-lg flex items-center justify-center">
+                        project.utils.isMobile ? (
+                            <a href={project.links.site} target="_blank" className="text-white font-semibold w-full bg-[#4DBD57] rounded-lg flex items-center justify-center">
                                 <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
                             </a>
                         ) : (
-                            <div onClick={() => alert('Tidak support untuk versi mobile.')} className="text-[#03c4a152] font-semibold w-full bg-[#40A2D8] rounded-lg flex items-center justify-center cursor-pointer">
+                            <div onClick={() => alert('Tidak support untuk versi mobile.')} className="text-[#4DBD57] font-semibold w-full bg-[#40A2D8] rounded-lg flex items-center justify-center cursor-pointer">
                                 <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
                             </div>
                         )
                     ) : (
-                        <a href={project.siteLink} target="_blank" className="text-[#03c484] font-semibold w-full bg-[#03c4a152] rounded-lg flex items-center justify-center">
+                        <a href={project.links.site} target="_blank" className="text-white font-semibold w-full bg-[#4DBD57] rounded-lg flex items-center justify-center">
                             <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
                         </a>
                     )}
-                    <a href={project.githubLink} className="aspect-square h-[40px] bg-white rounded-lg flex items-center justify-center">
+                    <a href={project.links.github} className="aspect-square h-[40px] bg-white rounded-lg flex items-center justify-center">
                         <i className="fa-brands fa-github text-2xl text-black"></i>
                     </a>
                 </div>
