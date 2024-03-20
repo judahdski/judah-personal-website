@@ -12,14 +12,23 @@ const App = () => {
     return (
         <>
             <div className={`relative w-screen h-[${innerHeight}px]`}>
-                <div className="absolute top-0 bottom-0 left-0 right-0">
+                <div className='absolute top-0 bottom-0 left-0 right-0'>
                     <Header navButtonOnClick={setNavTextHandle} />
-                    <div className="split md:flex">
-                        <main className="w-full h-full overflow-hidden md:relative order-2">
+                    <div className='split md:flex'>
+                        <main className='w-full h-full overflow-hidden md:relative order-2'>
                             <Routes>
-                                <Route path="/" element={<Home />} />
-                                <Route path="/projects" element={<Projects />} />
-                                <Route path="/contacts" element={<Contacts />} />
+                                <Route
+                                    path='/'
+                                    element={<Home />}
+                                />
+                                <Route
+                                    path='/projects'
+                                    element={<Projects />}
+                                />
+                                <Route
+                                    path='/contacts'
+                                    element={<Contacts />}
+                                />
                             </Routes>
                         </main>
                         <Footer />
