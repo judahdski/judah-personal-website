@@ -12,8 +12,7 @@ const Header = ({ navButtonOnClick }) => {
             h-[60px] md:h-20 text-white
             px-6 md:px-5 
             flex justify-between items-center
-        "
-        >
+        ">
             <a href="/">
                 <img src={regularLogo} className="w-8 md:w-12 aspect-square" />
             </a>
@@ -21,14 +20,12 @@ const Header = ({ navButtonOnClick }) => {
                 className={`
                 bg-[#1c1c1c6d] md:bg-[#1c1c1c] 
                 p-4 md:h-full md:p-0
-                flex flex-row items-end md:items-center justify-center gap-6 
-                text-center transition z-10 
-                ${navMenuActive ? 'top-0 bottom-0' : '-top-full'} absolute inset-x-0 md:static 
+                ${navMenuActive ? 'flex top-full' : 'hidden'} md:flex flex-row items-end md:items-center justify-center gap-6 
+                text-center transition z-10  absolute inset-x-0 md:static 
                 shadow md:shadow-none`}
                 onClick={() => {
                     setNavMenuActive(!navMenuActive);
-                }}
-            >
+                }}>
                 {menus.map(({ path, title }, index) => (
                     <NavLink
                         key={index}
@@ -37,8 +34,7 @@ const Header = ({ navButtonOnClick }) => {
                         onClick={() => {
                             setNavMenuActive(!navMenuActive);
                             navButtonOnClick(title);
-                        }}
-                    >
+                        }}>
                         {title}
                     </NavLink>
                 ))}
@@ -48,8 +44,7 @@ const Header = ({ navButtonOnClick }) => {
                 className="md:hidden px-4 py-3"
                 onClick={() => {
                     setNavMenuActive(!navMenuActive);
-                }}
-            >
+                }}>
                 <i className="fa-solid fa-align-right" id="hamburgerBtn"></i>
             </span>
         </header>
@@ -65,8 +60,7 @@ const MobileMenu = () => (
                 className="py-4 font-medium text-sm tracking-widest bg-white text-black rounded-xl active:border-white active:bg-[#292929] active:text-white"
                 onClick={() => {
                     setNavMenuActive(!navMenuActive);
-                }}
-            >
+                }}>
                 {title}
             </NavLink>
         ))}

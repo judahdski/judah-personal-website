@@ -45,7 +45,7 @@ const ProjectCards = ({ project }) => {
                                 <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
                             </a>
                         ) : (
-                            <div onClick={() => alert('Tidak support untuk versi mobile.')} className="text-[#4DBD57] font-semibold w-full bg-[#40A2D8] rounded-lg flex items-center justify-center cursor-pointer">
+                            <div onClick={() => alert('Tidak support untuk versi mobile.')} className="text-white font-semibold w-full bg-[#3b9143] rounded-lg flex items-center justify-center cursor-pointer">
                                 <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i> Live Demo
                             </div>
                         )
