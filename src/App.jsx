@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './assets/style/index';
-import { Header, Home, Projects, Contacts, Footer, NavText } from './components/index';
+import { Header, Footer, NavText } from './components/index';
+import { Home, Projects, Contacts } from "./pages/index";
 import { useState } from 'react';
 
 const App = () => {

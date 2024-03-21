@@ -6,7 +6,7 @@ const Projects = () => {
         <section
             id='projects'
             className='px-4 md:px-8 flex justify-center items-center'>
-            <div className='pt-4 pb-6 md:pt-6 md:pb-8 w-full h-full flex flex-wrap justify-center items-start gap-4 md:gap-6 overflow-y-scroll scrollbar-hide'>
+            <div className='pt-4 pb-[72px] md:pt-6 md:pb-8 w-full h-full flex flex-wrap justify-center items-start gap-4 md:gap-6 overflow-y-scroll scrollbar-hide'>
                 {PROJECTS.map((project, index) => (
                     <ProjectCards
                         key={index}
