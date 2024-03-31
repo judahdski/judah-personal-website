@@ -7,7 +7,7 @@ const Home = () => {
         <section
             id='home'
             className='home relative h-full flex justify-center items-center text-white cursor-pointer'
-            onClick={() => setIsHomepage((oldState) => !oldState)}>
+            onClick={() => {window.innerWidth > 768 ? setIsHomepage((oldState) => !oldState) : console.log('Hi')}}>
             {isHomepage ? (
                 <div className='home-text-content'>
                     <p className='py-2 px-3 px-lg-4 mb-0 opacity-70'>I AM</p>
@@ -24,7 +24,7 @@ const Home = () => {
                 <p>ABOUT ME</p>
             )}
 
-            {isHomepage ? <p className='absolute bottom-8 text-sm opacity-60'>Click here for the detail about me</p> : <></>}
+            {isHomepage && window.innerWidth > 768 ? <p className='absolute bottom-8 text-sm opacity-60'>Click here for the detail about me</p> : <></>}
         </section>
     );
 };
