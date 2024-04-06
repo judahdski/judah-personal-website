@@ -11,28 +11,27 @@ export const App = () => {
 	return <MainApp />;
 };
 
-
 // #region initial methods
 const onInit = () => {
-    greetUser();
-}
+	greetUser();
+};
 
 const greetUser = () => {
-    const day = new Date();
+	const day = new Date();
 	const hr = day.getHours(),
-    language = navigator.language;
+		language = navigator.language;
 	let greetWord = '';
-    
+
 	if (hr >= 0 && hr < 12) {
-        greetWord = `Good ${language == 'id_ID' || language == 'id-ID' ? 'Pagi' : 'Morning'}! 🌄`;
+		greetWord = `Good ${language == 'id_ID' || language == 'id-ID' ? 'Pagi' : 'Morning'}! 🌄`;
 	} else if (hr == 12) {
-        greetWord = `Good ${language == 'id_ID' || language == 'id-ID' ? 'Siang' : 'Afternoon'}! 🌞`;
+		greetWord = `Good ${language == 'id_ID' || language == 'id-ID' ? 'Siang' : 'Afternoon'}! 🌞`;
 	} else if (hr >= 12 && hr <= 17) {
-        greetWord = `Good ${language == 'id_ID' || language == 'id-ID' ? 'Sore' : 'Afternoon'}! 🌇`;
+		greetWord = `Good ${language == 'id_ID' || language == 'id-ID' ? 'Sore' : 'Afternoon'}! 🌇`;
 	} else {
-        greetWord = `Good ${language == 'id_ID' || language == 'id-ID' ? 'Malam' : 'Evening'}! 🌆`;
+		greetWord = `Good ${language == 'id_ID' || language == 'id-ID' ? 'Malam' : 'Evening'}! 🌆`;
 	}
-    
+
 	document.title = greetWord;
 };
 // #endregion initial methods

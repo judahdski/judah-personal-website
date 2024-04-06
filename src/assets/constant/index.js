@@ -23,10 +23,10 @@ export const menus = [
         path: 'projects',
         title: 'PROJECTS',
     },
-    {
-        path: '',
-        title: 'RESUME',
-    },
+    // {
+    //     path: '',
+    //     title: 'RESUME',
+    // },
     {
         path: 'contacts',
         title: 'CONTACT',
